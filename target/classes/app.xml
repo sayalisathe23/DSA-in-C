@@ -1,0 +1,19 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="a" class="com.nt.Engine">
+		<property name="company" value="Rolls-Royce"/>
+		<property name="quality" value="Ten"/>
+	</bean>
+	
+	<bean id="c1" class="com.nt.Car" autowire="byType">
+		
+		<property name="name" value="Range Rover"/>
+		<property name="price" value="1000000"/>
+		<property name="en" ref="a"/>
+	</bean>
+	
+</beans>
